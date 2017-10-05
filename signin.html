@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login and signup page</title>
+        <meta name="viewport" content="width=device width, initial-scale=1.0">
+        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <style>
+            html {
+                background-color: beige;
+            
+}
+            header{
+                font-display: block;
+                font-family: cursive;
+                font-size: 30px;
+                color: aliceblue;
+            }
+            
+            body {
+                background-color:cornflowerblue;
+                font-family: sans-serif;
+                font-size: 15px;
+                margin: auto;
+                padding: 4em 2em;
+}
+            ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: lightyellow;
+                overflow: hidden;
+            }
+            li{
+                float: left;
+            }
+            li a{
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover{
+                background-color: yellowgreen
+            }
+            .form_wrapper{
+                width: 350px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            #signup, #login{
+                position:absolute;
+                width: 50%; height: 75%;
+                padding: 18px 60px;
+                margin: 40px 60px;
+                background: #fff;
+                border: 2px solid #ffffff;
+                border-radius: 5px;
+                box-sizing: border-box
+            }
+}
+            #login{
+                z-index: 22;
+                position: absolute;
+}
+            #register{
+                z-index: 21;
+                opacity: 0;
+}
+            #toregister:target~ #wrapper #register,
+            #tologin:target~ #wrapper #login{
+                z-index: 22;
+                animation-name: fadeInLeft;
+                animation-delay: .1s;
+}
+            .animate{
+                animation-duration: 0.3s;
+                animation-timing-function: ease;
+                animation-fill-mode: both;
+            }
+            @keyframes fadeInLeft{
+                0%{
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+    
+        </style> 
+    </head>
+    <body>
+        <header><strong><em>My shopping list</em></strong> <img src="shopping%20list.jpg" style="display: inline-flex; width: 10%"></header>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shoppingList.html">My list</a></li>
+            <li> <a href="signin.html">Sign in</a></li>
+        </ul>
+    </nav>
+        <div id="mycontainer">
+            <a class="hiddenanchor" id="tologin"></a>
+            <a class="hiddenanchor" id="toregister"></a>
+            <div id="wrapper">
+                <div id="login" class="formanimation">
+                    <form>
+                        <h1>Login</h1>
+                        <p>
+                            <label>Your username</label><br>
+                            <input type="text" name="username" required>
+                        </p>
+                        <p>
+                            <label>Password</label><br>
+                            <input type="password" name="psw" required>
+                        </p>
+                        <p class="keeploggedon">
+                            <label><em>Keep me logged in</em></label>
+                            <input type="checkbox" name="keeploggedin" value="loggedin">
+                        </p>
+                        <p>
+                            <input type="submit" value="Login">
+                        </p>
+                        <p class="linkchange">
+                            Not a member yet?
+                            <a href="#toregister" class="to_register">Join us</a>
+                        </p>
+                    </form>
+                </div>
+                <div id="signup" class="formanimation">
+                    <form>
+                        <h1>Sign up</h1>
+                        <p>
+                            <label>Enter a username</label><br>
+                            <input type="text" name="username" required>
+                        </p>
+                        <p>
+                            <label>Email address</label><br>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label>Password</label><br>
+                            <input type="password" name="psw" required>
+                        </p>
+                        <p>
+                            <label>Confirm Password</label><br>
+                            <input type="password" name="psw" required>
+                        </p>
+                        <p>
+                            <input type="submit" value="Sign up">
+                        </p>
+                        <p class="linkchange">
+                            Already a member?
+                            <a href="#tologin" class="to_register">Go to login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+    </body>
+
+</html>
