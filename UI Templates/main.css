@@ -1,0 +1,42 @@
+html {
+    background-color: beige;
+}
+body {
+    background: cornflowerblue;
+    font-family: sans-serif;
+    font-size: 1em;
+    margin: auto;
+    padding: 4em 2em;
+}
+#wrapper h1 {
+    font-family: serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 15px;
+    display: block;
+    width: 100%;
+}
+#wrapper input:not([type="checkbox"]){
+    border-radius: 3px;
+    padding: inherit;
+    box-sizing: content-box;
+}
+#login{
+    z-index: 22;
+    position: absolute;
+}
+#register{
+    z-index: 21;
+    opacity: 0;
+}
+#toregister:target~ #wrapper #register,
+#tologin:target~ #wrapper #login{
+    z-index: 22;
+    animation-name: fadeInLeft;
+    animation-delay: .1s;
+}
+footer{
+                color: aliceblue;
+                background-color: black;
+                text-align: center
